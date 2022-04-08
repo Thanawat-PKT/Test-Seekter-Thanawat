@@ -1,0 +1,117 @@
+:root {
+  /* Colors: */
+  --unnamed-color-12121240: #12121240;
+  --unnamed-color-12121280: #12121280;
+  --unnamed-color-121212: #121212;
+  --unnamed-color-17204d: #17204d;
+  --unnamed-color-144bcc: #144bcc;
+  --unnamed-color-0080ff: #0080ff;
+  --unnamed-color-ffc600: #ffc600;
+  --unnamed-color-f7f8f9: #f7f8f9;
+  --unnamed-color-707070: #707070;
+  --unnamed-color-ffffff: #ffffff;
+  --unnamed-color-141516: #141516;
+  --unnamed-color-007aff: #007aff;
+
+  /* Font/text values */
+  --unnamed-font-family-prompt: Prompt;
+  --unnamed-font-style-normal: normal;
+  --unnamed-font-weight-600: 600px;
+  --unnamed-font-weight-medium: medium;
+  --unnamed-font-weight-normal: normal;
+  --unnamed-font-weight-bold: bold;
+  --unnamed-font-size-16: 16px;
+  --unnamed-font-size-18: 18px;
+  --unnamed-font-size-24: 24px;
+  --unnamed-font-size-32: 32px;
+  --unnamed-font-size-48: 48px;
+  --unnamed-character-spacing-0: 0px;
+  --unnamed-line-spacing-24: 24px;
+  --unnamed-line-spacing-28: 28px;
+  --unnamed-line-spacing-36: 36px;
+  --unnamed-line-spacing-49: 49px;
+  --unnamed-line-spacing-72: 72px;
+}
+
+/* Character Styles */
+.h1-prompt-—-48pt {
+  font-family: var(--unnamed-font-family-prompt);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-medium);
+  font-size: var(--unnamed-font-size-48);
+  line-height: var(--unnamed-line-spacing-72);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-121212);
+}
+.h2-prompt-—-32pt {
+  font-family: var(--unnamed-font-family-prompt);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-medium);
+  font-size: var(--unnamed-font-size-32);
+  line-height: var(--unnamed-line-spacing-49);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-121212);
+}
+.h3-roboto-—-24pt {
+  font-family: var(--unnamed-font-family-prompt);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-medium);
+  font-size: var(--unnamed-font-size-24);
+  line-height: var(--unnamed-line-spacing-36);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-121212);
+}
+.h4-prompt-—-16pt {
+  font-family: var(--unnamed-font-family-prompt);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-normal);
+  font-size: var(--unnamed-font-size-16);
+  line-height: var(--unnamed-line-spacing-24);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-ffc600);
+}
+.h5-prompt-—-24pt {
+  font-family: var(--unnamed-font-family-prompt);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-medium);
+  font-size: var(--unnamed-font-size-24);
+  line-height: var(--unnamed-line-spacing-36);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-007aff);
+}
+.body-prompt-—-16pt {
+  font-family: var(--unnamed-font-family-prompt);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-normal);
+  font-size: var(--unnamed-font-size-16);
+  line-height: var(--unnamed-line-spacing-24);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-141516);
+}
+.menu-prompt-—-16pt {
+  font-family: var(--unnamed-font-family-prompt);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-medium);
+  font-size: var(--unnamed-font-size-16);
+  line-height: var(--unnamed-line-spacing-24);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-17204d);
+}
+.unnamed-character-style-1 {
+  font-family: var(--unnamed-font-family-prompt);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-600);
+  font-size: var(--unnamed-font-size-18);
+  line-height: var(--unnamed-line-spacing-28);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-141516);
+}
+.button-prompt-—-16pt {
+  font-family: var(--unnamed-font-family-prompt);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-16);
+  line-height: var(--unnamed-line-spacing-24);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-ffffff);
+}
