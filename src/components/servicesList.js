@@ -1,43 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
-import { serviceId } from '../features/services/servicesSlice';
+import { serviceId, updateToken, dataToken } from '../features/services/servicesSlice';
 import '../assets/scss/service.scss'
 
 const ServicesList = () => {
 
   const dispatch = useDispatch();
   const [dataServicesList, setDataServicesList] = useState([])
-  // const [token, setToken] = useState('')
+  const token = useSelector(dataToken)
   useEffect(() => {
-    // signIn()
-    signInTwo()
+    signIn()
     fetchData()
   }, [])
 
-  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjRmOGJhOTliYzg2Yzk5Y2QxYWU2YTIiLCJpYXQiOjE2NDkzODI3NTgsImV4cCI6MTY0OTQxODc1OH0.dNw85mZdRDkX2-1VkVYPWQo55-TEOeqa7sxInNSvjT8"
   const signIn = () => {
-    const config = {
-      headers: { ACCESS_TOKEN: `Bearer ${token}` }
-    };
-
-    const bodyParameters = {
-      username: "Test numbertwo",
-      password: "Test numbertwo"
-    };
-
-    axios.post('https://api-candidate-test.workforce-develop.com/v1/auth/signin',
-      bodyParameters,
-      config
-    ).then((res) => {
-      console.log('res', res)
-    }).catch((err) => {
-      console.log('err', err)
-    })
-  }
-
-  const signInTwo = () => {
     const config = {
       ACCESS_TOKEN: { Authorization: `Bearer ${token}` }
     };
@@ -50,7 +28,11 @@ const ServicesList = () => {
     axios.post('https://api-candidate-test.workforce-develop.com/v1/auth/signin',
       bodyParameters,
       config
-    ).then(console.log).catch(console.log);
+    ).then((res) => {
+      dispatch(updateToken(res.data.accessToken))
+    }).catch((err) => {
+      console.log(err)
+    });
   }
 
 
