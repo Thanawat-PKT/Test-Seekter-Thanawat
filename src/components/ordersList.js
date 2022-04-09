@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import moment from 'moment';
 import { Link } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux';
-import { dataServiceById } from '../features/services/servicesSlice'
+import { useSelector } from 'react-redux';
+import { dataToken } from '../features/services/servicesSlice'
 import '../assets/scss/service.scss'
 
 const OrderList = () => {
 
-  const service_id = useSelector(dataServiceById)
+  const token = useSelector(dataToken)
 
   const [dataOrderList, setDataOrderList] = useState([])
 
@@ -21,7 +21,6 @@ const OrderList = () => {
     try {
       const url = 'https://api-candidate-test.workforce-develop.com/v1/orders'
 
-      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjRmOGJhOTliYzg2Yzk5Y2QxYWU2YTIiLCJpYXQiOjE2NDk0MTcwMzUsImV4cCI6MTY0OTQ1MzAzNX0.f5FI6Tw-qItgPW6CJmv1qKlOVlceZ_QmmYxjSrFpRbo"
       axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
 
       // axios.interceptors.request.use(function (config) {
