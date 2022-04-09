@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, useHistory } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux';
-import { dataServiceById } from '../features/services/servicesSlice'
+import { useSelector } from 'react-redux';
+import { dataServiceById, dataToken } from '../features/services/servicesSlice'
 import '../assets/scss/service.scss'
 
 const ServicesDetail = () => {
   const history = useHistory()
   const service_id = useSelector(dataServiceById)
+  const token = useSelector(dataToken)
 
   const [dataServicesDetail, setDataServicesDetail] = useState([])
 
@@ -29,43 +30,11 @@ const ServicesDetail = () => {
   }
 
 
-  // const bookIng = () => {
-  //   axios.post((`https://api-candidate-test.workforce-develop.com/v1/services/${service_id}/booking`), {
-  //     //No BODY
-  //   }).then((res) => {
-  //     console.log('res-bookIng', res);
-  //     history.push('./order')
-  //   })
-  // }
-
-  const token = "eyJ1c2VySWQiOiI2MjRmOGJhOTliYzg2Yzk5Y2QxYWU2YTIiLCJpYXQiOjE2NDk0MDc4OTUsImV4cCI6MTY0OTQ0Mzg5NX0.EwazCHwOjHxkwxcWI3uuVXBQqdU2o_MX_ZvdhREcbZI.EwazCHwOjHxkwxcWI3uuVXBQqdU2o_MX_ZvdhREcbZI"
-
-
   const bookIng = async () => {
-    // const config = {
-    //   headers: {
-    //     accessToken: token
-    //   },
-    // };
-
-    // const bodyParameters = {
-    //   username: "Test numbertwo",
-    //   password: "Test numbertwo"
-    // };
-
-    // axios.post(`https://api-candidate-test.workforce-develop.com/v1/services/${service_id}/booking`,
-    //   // bodyParameters,
-    //   config
-    // ).then((res) => {
-    //   console.log('res', res)
-    // }).catch((err) => {
-    //   console.log('err', err)
-    // })
 
     try {
       const url = `https://api-candidate-test.workforce-develop.com/v1/services/${service_id}/booking`
 
-      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjRmOGJhOTliYzg2Yzk5Y2QxYWU2YTIiLCJpYXQiOjE2NDk0MTcwMzUsImV4cCI6MTY0OTQ1MzAzNX0.f5FI6Tw-qItgPW6CJmv1qKlOVlceZ_QmmYxjSrFpRbo"
       axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
 
       // axios.interceptors.request.use(function (config) {
